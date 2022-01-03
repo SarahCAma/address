@@ -177,60 +177,6 @@ def delete():
         conn.commit()
 
 
-
-
-
-# def search():
-#     print(f"LINE 181 {find_record.get()}")
-#     if find_record.get() == '':
-#         print('no record ID entered')
-#     else:
-#         mainframe.pack_forget()
-#         separator.pack_forget()
-#         frame2.pack_forget()
-
-#         conn = create_connection(db)
-
-#         with conn:
-#             c = conn.cursor()
-#             c.execute("SELECT * FROM addresses WHERE id=?", [(find_record.get())])
-#             row = c.fetchall()
-#             print(row)
-
-#             # in c.execute line: find_record.get() needs to be in [] or (find_record.get(),)
-
-#         searchframe.pack()
-#         searchframe_title.grid(row=0, pady=20)
-
-#         result_table.grid(row=1)
-
-#         result_table.column("#0", width=0, stretch=NO)
-#         result_table.column('ID', anchor='center', width=50)
-#         result_table.column('f_name', anchor='center', width=100)
-#         result_table.column('l_name', anchor='center', width=100)
-#         result_table.column('address', anchor='center', width=100)
-#         result_table.column('city', anchor='center', width=100)
-#         result_table.column('postcode', anchor='center', width=100)
-
-#         result_table.heading('ID', text="ID")
-#         result_table.heading('f_name', text="First Name")
-#         result_table.heading('l_name', text="Surname")
-#         result_table.heading('address', text="Address")
-#         result_table.heading('city', text="City")
-#         result_table.heading('postcode', text="Postcode")
-
-#         try:
-#             result_table.insert('', index='end', text='', values=(row[0][0], row[0][1], row[0][2], row[0][3], row[0][4], row[0][5]))
-#         except IndexError:
-#             print("This record does not exist!")
-#             error_msg2.configure(text=f"Record ( ID:{find_record.get()} ) does not exist")
-#             error_msg2.grid(row=2, pady=(20,0))
-#         finally:
-#             homepage_btn.configure(command=index, style="font.TButton")
-#             homepage_btn.grid(row=3, pady=20)
-
-
-
 def search2(arg1, arg2=''):
     mainframe.pack_forget()
     separator.pack_forget()
@@ -319,11 +265,6 @@ def search2(arg1, arg2=''):
 
 
 
-
-
-
-
-
 ## MAINFRAME ##
 
 # Create entry textbox labels
@@ -359,11 +300,8 @@ search_btn = ttk.Button(frame2, text="Search", command=partial(search2, 'search'
 
 
 
-
 if __name__ == '__main__':
     main()
-
-
 
 
 
